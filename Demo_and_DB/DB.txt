@@ -1,0 +1,33 @@
+
+create table products_db;
+use products_db;
+
+ create table products (
+   id int primary KEY,
+   product varchar(100),
+   description varchar(300),
+   codeCate int,
+   price double,
+   state varchar(100),
+   FOREIGN key (codeCate) REFERENCES categories(id) ON DELETE CASCADE
+);
+INSERT INTO products(id,product,description,codeCate,price,state) VALUES (1,"azucar","azucar blanca",1005, 3.00,"VENTA"); 
+INSERT INTO products(id,product,description,codeCate,price,state) VALUES (2,"arroz","arroz fina ",1004, 4.00,"VENTA"); 
+INSERT INTO products(id,product,description,codeCate,price,state) VALUES (3,"inka kola","inka kola 1L",1001, 4.50,"VENTA"); 
+
+
+create table categories(
+    id int primary KEY,
+    category varchar(100)
+);
+
+
+INSERT INTO categories(id,category) VALUES (1000,"GOLOSINAS"); 
+INSERT INTO categories(id,category) VALUES (1001,"BEBIDAS"); 
+INSERT INTO categories(id,category) VALUES (1002,"MENESTRAS");
+INSERT INTO categories(id,category) VALUES (1003,"CEREALES"); 	 
+INSERT INTO categories(id,category) VALUES (1004,"PASTAS"); 
+INSERT INTO categories(id,category) VALUES (1005,"EDULCORANTES"); 	
+
+	
+	
