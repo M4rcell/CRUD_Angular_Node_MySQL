@@ -1,0 +1,88 @@
+
+<div>
+    <div class="ms-dialog-header">
+        <mat-icon class="ms-dialog-header__icon">edit</mat-icon>
+        <h3 class="ms-dialog-header__title"> Editar producto</h3>
+        <span class="ms-fill"></span>
+        <button mat-icon-button mat-dialog-close>
+            <mat-icon>cancel</mat-icon>
+        </button>
+    </div>
+    <mat-divider></mat-divider>
+
+    <mat-dialog-content style="margin-top: 20px;" >
+        <mat-progress-bar mode="indeterminate" *ngIf="loading$ | async"></mat-progress-bar>
+        <form [formGroup]="productForm" autocomplete="off" class="container-form">
+            <div class="container-form__work">
+                <mat-form-field appearance="outline" class="container-form__work--input"
+                    >
+                    <mat-label>Codigo</mat-label>
+                    <input matInput type="number" placeholder="Ingrese codigo" formControlName="id" />
+                    <mat-error *ngIf="productForm.controls['id'].errors">
+                        Campo <strong>requerido.</strong>
+                    </mat-error>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline" class="container-form__work--input"
+                    >
+                    <mat-label>Producto</mat-label>
+                    <input matInput type="text" placeholder="Ingrese nombre de producto" formControlName="product" />
+                    <mat-error *ngIf="productForm.controls['product'].errors">
+                        Campo <strong>requerido.</strong>
+                    </mat-error>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline" class="container-form__work--input"
+                    >
+                    <mat-label>Descripcion</mat-label>
+                    <input matInput type="text" placeholder="Ingrese descripcion" formControlName="description" />
+                    <mat-error *ngIf="productForm.controls['description'].errors">
+                        Campo <strong>requerido.</strong>
+                    </mat-error>
+                </mat-form-field>
+
+                <mat-form-field *ngIf="category$ | async as categories" appearance="outline" id="result"  class="container-form__work--input"
+                >
+                    <mat-label>Categoria</mat-label>
+                    <mat-select  formControlName="codeCate" >
+                        <mat-option *ngFor="let item of categories" [value]="item.id">
+                            {{item.category}}                           
+                        </mat-option>
+                    </mat-select>
+                    <mat-hint *ngIf="!(category$)">
+                        <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+                        <p>Cargando lista ...</p>
+                    </mat-hint>
+
+                    <mat-error *ngIf="productForm.controls['codeCate'].errors">
+                        Campo <strong>requerido.</strong>
+                    </mat-error>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline" class="container-form__work--input"
+                    >
+                    <mat-label>Precio</mat-label>
+                    <input matInput type="number" placeholder="Ingrese precio" formControlName="price" />
+                    <mat-error *ngIf="productForm.controls['price'].errors">
+                        Campo <strong>requerido.</strong>
+                    </mat-error>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline" class="container-form__work--input"
+                    >
+                    <mat-label>Estado</mat-label>
+                    <input matInput type="text" placeholder="Ingrese estado" formControlName="state" />
+                    <mat-error *ngIf="productForm.controls['state'].errors">
+                        Campo <strong>requerido.</strong>
+                    </mat-error>
+                </mat-form-field>
+            </div>
+
+        </form>
+    </mat-dialog-content>
+    
+    <mat-dialog-actions align="end">
+        <button mat-stroked-button color="warn" mat-dialog-close [disabled]="loading$ | async">CANCELAR</button>
+        <button mat-stroked-button color="primary" (click)="save()" [disabled]="loading$ | async">GUARDAR</button>
+    </mat-dialog-actions>
+</div>

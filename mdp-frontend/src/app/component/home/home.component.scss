@@ -1,0 +1,48 @@
+
+.main_toolbar{
+    background: #1D428A;
+    color: white;
+}
+
+.container{
+    margin-left: 10%;
+    margin-right: 10%;
+
+    &__btn-add{
+        margin-top: 30px;
+        border: 1px solid #1D428A;
+        background: white;
+        color: #1D428A;
+        padding: 3px 30px;
+    }
+    &__container-body{
+        //width:900px;
+        text-align: center;
+    }
+}
+
+
+.container-table {
+    margin-top: 30px;
+    max-width: 100%;
+    overflow: auto;
+}
+
+table {
+    .table__cell {
+        width:100vw;
+        min-width: 90px;
+        padding: 0px 8px;
+    }
+}
+
+.theader {
+    background: #f0eefc;
+    color: #2b2b2b;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+

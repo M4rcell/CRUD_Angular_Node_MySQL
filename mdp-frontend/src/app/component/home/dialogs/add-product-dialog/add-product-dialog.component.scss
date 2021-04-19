@@ -1,0 +1,47 @@
+
+.ms-fill {
+    flex: auto 1 1;
+}
+// Dialog style
+.ms-dialog-header {
+    display: flex;
+    align-items: stretch;
+    margin-bottom: 10px;
+
+    &__icon {
+        color: #2b2b2b;
+        align-self: center;
+        margin-right: 12px;
+    }
+
+    &__title {
+        color: #2b2b2b;
+        align-self: center;
+        font-family: "Poppins", sans-serif;
+        font-weight: 600;
+        color: #2b2b2b;
+        margin: 0px !important;
+    }
+
+    &__close {
+        height: 25px !important;
+        width: 25px !important;
+        line-height: 25px !important;
+    }
+}
+
+
+.container-form {
+    display: flex;
+    flex-direction: column;
+
+    &__work {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        &--input {
+            width: 90%;
+        }
+    }
+
+}
