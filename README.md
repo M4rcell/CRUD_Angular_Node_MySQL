@@ -10,14 +10,14 @@ CRUD frontend en angular, backend en node y typescript y gestor de DB MySQL
 - cors
 
 ### Frontend
-npm install => instalar packetes
-ng serve => ejecutar la aplicacion
+-npm install => instalar packetes
+-ng serve => ejecutar la aplicacion
 
 ### Backend
-npm install => instalar packetes
+-npm install => instalar packetes
 
-npm run dev  => estara vigilando el build para convertir archivo ts a js.
-npm run build => estara vigilando el archivo SRC a cualquierr cambio.
+-npm run dev  => estara vigilando el build para convertir archivo ts a js.
+-npm run build => estara vigilando el archivo SRC a cualquierr cambio.
 
 ## DEMO
 
