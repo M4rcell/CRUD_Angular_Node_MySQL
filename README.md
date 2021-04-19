@@ -26,6 +26,7 @@ npm run build => estara vigilando el archivo SRC a cualquierr cambio.
      <img width="80%"  src="https://github.com/M4rcell/CRUD_Angular_Node_MySQL/blob/master/Demo_and_DB/product_2.png" alt="List screen" title="List screen"></img> 
      <img width="80%"  src="https://github.com/M4rcell/CRUD_Angular_Node_MySQL/blob/master/Demo_and_DB/product_3.png" alt="List screen" title="List screen"></img> 
      <img width="80%"  src="https://github.com/M4rcell/CRUD_Angular_Node_MySQL/blob/master/Demo_and_DB/product_4.png" alt="List screen" title="List screen"></img> 
+     <img width="80%"  src="https://github.com/M4rcell/CRUD_Angular_Node_MySQL/blob/master/Demo_and_DB/product_5.png" alt="List screen" title="List screen"></img> 
 </div> 
 
 
